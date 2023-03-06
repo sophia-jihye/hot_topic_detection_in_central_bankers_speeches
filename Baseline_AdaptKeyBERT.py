@@ -50,7 +50,7 @@ if __name__ == '__main__':
         keywords = kw_model.extract_keywords(doc, top_n=5) # keyphrase_ngram_range=(2, 2) does not work.
         one_period_df = pd.DataFrame(keywords, columns=['word', 'score'])
 
-        one_period_df = normalize_bigrams(one_period_df)
+        #one_period_df = normalize_bigrams(one_period_df)
 
         one_period_df['period'] = period
         dfs.append(one_period_df)

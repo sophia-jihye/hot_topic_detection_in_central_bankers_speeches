@@ -14,7 +14,8 @@ from tqdm import tqdm
 
 filepath = 'data/preprocessed_sentences_for_each_period_1997Q1-2019Q3.csv'
 
-save_dir = 'C:\DATA\hot_topic_detection_in_central_bankers_speeches'
+save_dir = '/data/jihye_data/hot_topic_detection_in_central_bankers_speeches'
+if not os.path.exists(save_dir): os.makedirs(save_dir)
 save_filepath = os.path.join(save_dir, 'top5_hot_topics_unigram_AdaptKeyBERT.csv')
 
 def normalize_bigrams(original_df):
